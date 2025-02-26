@@ -22,14 +22,21 @@ h2.tengah {
 
 #content {
     background-color: lightgray;
-    margin:5px;
+    margin: 5px 10px 10px 5px;
+    padding: 5px;
 }
 
+button[type=submit]{
+    
+    border:none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
 
-
-
-
-
+button[type=submit]:hover{
+    background-color: blue;
+}
 
 
 </style>
@@ -38,22 +45,29 @@ h2.tengah {
 
 </head>
 <body>
-    <div id="content"></div>
+    <div id="content">
     <h1>Welcome to JTMK</h1>
     <h2 class="bg-darks text-whites">Selamat Datang ke JTMK</h2>
     <h2 class="tengah">Hello</h2>
     
     <p style="color:darkblue; font-size: 20px;">Track Offered</p>
 
+    <input type="text" id="name" placeholder="Please enter your name">
+
+    <input type="email" id="email" placeholder="Please enter your email">
+
     <P class="toUpperCase">Please select your track</P>
     <ul">
+
         <li>Software and Development Track</li>
         <li>Networking System Track</li>
         <li>Data Visualization Track</li>
+
     </ul>
+    <br>
 
     <button class="button" type="submit">Apply here!</button>
-
+</div>
     <div class="container">
         <div class="box"></div>
 

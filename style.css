@@ -1,7 +1,7 @@
 body {
     background-color: beige;
     background: url(jtmk\ wallpaper.jpg);
-    background-size: 750pxs; ;
+    background-size: 100%; ;
     background-repeat:no-repeat;
    
 }
@@ -16,14 +16,19 @@ body {
     text-align: center;
 }
 
-.button {
-
-}
-
 .container .box p {
     background-color: yellow;
 }
 
 .toUpperCase {
     text-transform:uppercase;
+}
+
+input[type=text], [type=email]{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
 }
