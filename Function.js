@@ -35,3 +35,60 @@ function countdown () {
     countdown--;
  }
 }
+
+
+
+
+
+//marks function
+function markah()
+{
+
+var markahPenuh = 50;
+let markah1 = prompt("Enter markah 1");
+let markah2 = prompt("Enter markah 2");
+let markah3 = prompt("Enter markah 3");
+
+var markahLabtask = {
+
+    items:[
+    { criteria: "TASK 1", marks: markah1},
+    { criteria: "TASK 2", marks: markah2},
+    { criteria: "TASK 3", marks: markah3}
+    ],
+    total: 0
+};
+
+// Calculate the total marks using += operator 
+for (var i = 0; i < markahLabtask.items.length; i++) {
+    markahLabtask.total += markahLabtask.items[i].marks;
+}
+// Calculate percentage
+var percent = markahLabtask.total/markahPenuh * 100
+
+console.log("Total Marks : " + markahLabtask.total);
+console.log("Percentage : " + percent)
+}
+
+
+
+
+
+// password function
+function checkPassword() {
+let password = prompt("Please enter your password");
+
+
+if(Number(password)){
+
+if(password.length >= 8) {
+    console.log("Strong Password");
+} 
+else{
+    console.log("Weak Password");
+}
+
+} else {
+    console.log("Enter Number Only");
+}
+}
