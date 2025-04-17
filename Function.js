@@ -72,23 +72,127 @@ console.log("Percentage : " + percent)
 
 
 
-
+let attempt = 0;
 
 // password function
-function checkPassword() {
+function checkPassword() 
+{
 let password = prompt("Please enter your password");
 
+if (attempt >= 3)
+{
+    console.log("Your attempt has run out")
+    return false;
+}
 
-if(Number(password)){
+
+
 
 if(password.length >= 8) {
     console.log("Strong Password");
-} 
-else{
-    console.log("Weak Password");
+}
+else {
+    console.log ("Weak password");
+    attempt += 1;
+
+    checkPassword()
+
 }
 
-} else {
-    console.log("Enter Number Only");
 }
+
+
+
+function CheckUmur() {
+    
+let umur = prompt("Enter your age: ");
+
+if (umur < 13){
+    console.log("Kanak-kanak");
+alert("Kanak-kanak");
+}
+
+else if(umur >= 13 && (umur < 19 )){
+console.log("Remaja");
+alert("Remaja");
+}
+
+else if(umur >=19 && (umur < 56)){
+    console.log("Dewasa");
+alert("Dewasa");
+}
+
+else {
+    console.log("Warga Emas");
+    alert("Warga Emas");
+}
+}
+
+
+function CheckIC() {
+
+    let umur = prompt("Enter your age");
+    let IC = confirm("Do you have your IC?");
+
+if(umur >= 18){
+
+    if(IC){
+        console.log("Welcome!");
+    }
+    else { console.log("Please give your IC");
+
+    }
+    
+}else {console.log("You are not old enough to enter")}
+
+}
+
+function Checksize() {
+
+    let jantina = prompt("Jantina?");
+    let size = prompt("Enter your size!");
+
+
+    switch (size) {
+
+        case 'S':
+        case 'M':
+            console.log("Size Kecil");
+            break;
+        case 'L':
+        case 'XL':
+            console.log("Size biasa");
+            break;
+        default:
+            console.log("Size Besar");
+            break; 
+    }
+}
+
+function Modulus() {
+    let num = prompt("Enter a number: ");
+
+    if(Number(num)) {
+        alert("Only enter a number");
+        
+    }
+    else {
+        
+
+    
+
+    let remainder = num % 2;
+
+    console.log("The remainder is this " + remainder)
+
+    if(remainder == 1){
+        console.log("The remainder is an Odd number");
+
+    } 
+    else {
+        console.log("The remainder is an Even number");
+
+    }
+}
+
 }
